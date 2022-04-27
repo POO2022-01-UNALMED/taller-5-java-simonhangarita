@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Zona{
   private String nombre;
   private Zoologico zoo;
-  private ArrayList<Animal> animales;
+  private ArrayList<Animal> animales=new ArrayList<Animal>();
   public Zona(String n,Zoologico z){
     nombre=n;
     zoo=z;
@@ -35,10 +35,8 @@ public class Zona{
   }
   public int cantidadAnimales(){
     int x=0;
-    if (animales!=null){
-      for(Animal e:animales){
-        x+=1;
-      }
+    for(Animal e:animales){
+      x+=1;
     }
     return x;
   }
